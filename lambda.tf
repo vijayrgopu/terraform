@@ -2,7 +2,7 @@
 resource "aws_lambda_function" "lambda_process_cadabra_orders" {
   filename      = "lambda_write_to_dynamodb.zip" 
   #(use this when using source_code_hash, source_code_hash is a local .zipfile name where the lambda code resides)
-  function_name = "ProcessOrders_03152021_20"
+  function_name = "ProcessOrders_"
   role          = aws_iam_role.iam_for_lambda.arn
   #handler = python script file name . entry point function name
   handler       = "lambda_write_to_dynamodb.lambda_handler"
